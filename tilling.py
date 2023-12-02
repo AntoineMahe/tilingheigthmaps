@@ -49,10 +49,10 @@ class ImageDivider:
 
                 # Save the square as a new image
                 output_path = os.path.join(
-                    self.output_folder, f"{original_image_name}_{x}_{y}.png"
+                    self.output_folder, f"{original_image_name}_x{str(x).zfill(3)}_y{str(y).zfill(3)}.png"
                 )
                 square.save(output_path)
-                self.logger.debug(f"Saved {original_image_name}_{x}_{y}.png.")
+                self.logger.debug(f"Saved {original_image_name}_x{str(x).zfill(3)}_y{str(y).zfill(3)}.png.")
 
 if __name__ == "__main__":
 
