@@ -1,5 +1,11 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import argparse
 from PIL import Image
 import os
+
+Image.MAX_IMAGE_PIXELS = None  # disabling DecompressionBomb check
 
 def divide_image(image_path, output_folder, tile_size):
     # Open the image
